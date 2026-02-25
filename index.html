@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title -->
+<title>Undangan Pernikahan Daud & Rika</title>
+
+<!-- Primary Meta -->
+<meta name="title" content="Undangan Pernikahan Daud & Rika">
+<meta name="description" content="Undangan pernikahan Daud & Rika. Kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada hari bahagia kami.">
+
+<!-- Open Graph (WA / Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="XXX">
+<meta property="og:title" content="Undangan Pernikahan Daud & Rika">
+<meta property="og:description" content="Undangan pernikahan Daud & Rika. Mohon doa restu dan kehadiran Bapak/Ibu/Saudara/i pada acara pernikahan kami.">
+<meta property="og:image" content="XXX/img/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="Undangan Pernikahan Daud & Rika">
+<meta property="twitter:description" content="Undangan pernikahan Daud & Rika. Mohon doa restu dan kehadiran Anda di hari bahagia kami.">
+<meta property="twitter:image" content="XXX/img/preview.jpg">
+
+<!-- Icon -->
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="bg-flower left"></div>
+<div class="bg-flower right"></div>
+
+<!-- COVER -->
+<section class="cover" id="cover">
+  <div class="cover-content">
+
+    <!-- FOTO MEMPELAI -->
+    <div class="cover-photo">
+      <img src="img/mempelai.jpg" alt="Foto Mempelai">
+    </div>
+
+    <h1>Daud & Rika</h1>
+    <p>Wedding Invitation</p>
+    <button onclick="openInvite()">Buka Undangan</button>
+  </div>
+</section>
+
+<audio id="music" src="music.mp3" loop></audio>
+
+<!-- MAIN -->
+<div id="main">
+
+<section class="hero parallax">
+  <h2 class="hero-title" data-aos="fade-down">Daud & Rika</h2>
+  <span class="hero-date" data-aos="fade-up">01 Juni 2026</span>
+</section>
+
+<section class="about" data-aos="fade-up">
+  <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
+  <p>
+    Dengan memohon rahmat dan ridho Allah SWT, Tuhan Yang Maha Esa,  
+    kami bermaksud menyampaikan kabar bahagia serta mengundang
+    Bapak/Ibu/Saudara/i untuk berkenan hadir dan memberikan doa restu
+    pada acara pernikahan kami.
+
+    <br><br>
+    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+    Bapak/Ibu/Saudara/i dapat meluangkan waktu untuk hadir dalam
+    momen sakral penyatuan dua insan dalam ikatan suci pernikahan ini.
+
+    <br><br>
+    Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i,
+    kami ucapkan terima kasih yang sebesar-besarnya.
+  </p>
+</section>
+
+<section class="couple">
+
+  <div class="person animate-person-left" data-aos="fade-right">
+    <div class="photo-wrapper">
+      <img src="img/pria.jpg" alt="Foto Daud">
+    </div>
+    <h4 class="name-shimmer">Daud</h4>
+    <p>Putra Bpk. Ahmad & Ibu Siti</p>
+  </div>
+
+  <div class="person animate-person-right" data-aos="fade-left">
+    <div class="photo-wrapper">
+      <img src="img/wanita.jpg" alt="Foto Rika">
+    </div>
+    <h4 class="name-shimmer">Rika</h4>
+    <p>Putri Bpk. Budi & Ibu Lina</p>
+  </div>
+
+</section>
+
+<section class="countdown" data-aos="zoom-in">
+  <h3>Menuju Hari Bahagia</h3>
+  <div id="timer"></div>
+</section>
+
+<section class="gallery">
+  <h3 data-aos="fade-up">Galeri</h3>
+  <div class="grid">
+    <img src="img/galeri1.jpg" class="gallery-item" data-aos="zoom-in" onclick="openLightbox(this)">
+    <img src="img/galeri2.jpg" class="gallery-item" data-aos="zoom-in" onclick="openLightbox(this)">
+    <img src="img/galeri3.jpg" class="gallery-item" data-aos="zoom-in" onclick="openLightbox(this)">
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+<section class="gift" data-aos="fade-up">
+  <h3 class="gift-title">Amplop Digital</h3>
+
+  <div class="gift-card">
+    <div class="gift-icon">💝</div>
+
+    <p class="rek">BCA - <span id="rekNumber">1234567890</span></p>
+    <p class="an">a.n Daud</p>
+
+    <button class="copy-btn" onclick="copyRek()">Salin No Rekening</button>
+    <div class="copy-msg" id="copyMsg">Nomor rekening berhasil disalin ✔</div>
+  </div>
+</section>
+
+<section class="guestbook" data-aos="fade-up">
+  <h3>Buku Tamu</h3>
+  <form id="guestForm">
+    <input type="text" id="name" placeholder="Nama" required>
+    <textarea id="message" placeholder="Ucapan & Doa" required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+  <div id="guestList"></div>
+</section>
+
+<section class="location" data-aos="fade-up">
+  <h3 class="location-title">Lokasi Acara</h3>
+
+  <div class="map-wrapper">
+    <div class="map-pin">📍</div>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.8271424472812!2d106.73029265902281!3d-6.458511145828351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8043797ff2d%3A0x556007a062f56522!2sCV.%20TIRTA%20USAHA%20(AQUA)!5e0!3m2!1sid!2sid!4v1771986318137!5m2!1sid!2sid"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <a class="map-btn" 
+     href="https://maps.google.com/?q=-6.458511145828351,106.73029265902281" 
+     target="_blank">
+     Buka di Google Maps
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <p class="copyright">
+      © 2026 Daud & Rika
+    </p>
+
+    <p class="powered">
+      Web Developer
+      <a href="https://instagram.com/benyoriki" target="_blank" 
+         class="ig-credit animated-credit">
+        <i class="fab fa-instagram"></i> @benyoriki
+      </a>
+    </p>
+	<p class="powered">
+      
+      <a href="https://jasadaud.online/" target="_blank" 
+         class="ig-credit animated-credit">
+        <i class="fab fa-instagram"></i> M DAUD S.M
+      </a>
+	  Sales Executive Marketing
+    </p>
+
+  </div>
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
