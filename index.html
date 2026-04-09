@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Title -->
-<title>Undangan Pernikahan Daud & Rika</title>
-
-<!-- Primary Meta -->
-<meta name="title" content="Undangan Pernikahan Daud & Rika">
 <meta name="description" content="Undangan pernikahan Daud & Rika. Kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada hari bahagia kami.">
 
 <!-- Open Graph (WA / Facebook) -->
@@ -26,172 +19,294 @@
 <meta property="twitter:description" content="Undangan pernikahan Daud & Rika. Mohon doa restu dan kehadiran Anda di hari bahagia kami.">
 <meta property="twitter:image" content="https://web189.github.io/happy-wedding//img/preview.jpg">
 
-<!-- Icon -->
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Daud &amp; Rika</title>
+<meta name="description" content="Undangan pernikahan Daud & Rika — 20 Juni 2026">
+<meta property="og:title" content="Undangan Pernikahan Daud & Rika">
+<meta property="og:description" content="Kami mengundang untuk hadir dan memberikan doa restu.">
+<meta property="og:image" content="img/preview.jpg">
 <link rel="icon" href="favicon.png">
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="bg-flower left"></div>
-<div class="bg-flower right"></div>
+<!-- scroll progress -->
+<div id="sb"></div>
 
-<!-- COVER -->
-<section class="cover" id="cover">
-  <div class="cover-content">
+<!-- petals -->
+<div id="petals"></div>
 
-    <!-- FOTO MEMPELAI -->
-    <div class="cover-photo">
-      <img src="img/mempelai.jpg" alt="Foto Mempelai">
+<!-- music -->
+<button id="mBtn" aria-label="Musik"><i class="fas fa-music" id="mIco"></i></button>
+<audio id="music" src="music.mp3" loop preload="none"></audio>
+
+<!-- dot nav -->
+<nav id="dn">
+  <div class="dot active" data-t="hero"></div>
+  <div class="dot" data-t="about"></div>
+  <div class="dot" data-t="couple"></div>
+  <div class="dot" data-t="countdown"></div>
+  <div class="dot" data-t="event"></div>
+  <div class="dot" data-t="gallery"></div>
+  <div class="dot" data-t="guestbook"></div>
+</nav>
+
+<!-- ===== COVER ===== -->
+<section id="cover">
+  <div class="cv-bg"></div>
+  <div class="cv-box">
+    <div class="cv-deco"><span></span><i class="fas fa-ring"></i><span></span></div>
+    <p class="cv-bis">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+    <div class="cv-pw">
+      <div class="cv-ring"></div>
+      <div class="cv-p"><img src="img/mempelai.jpg" alt="Mempelai" loading="eager"></div>
     </div>
-
-    <h1>Daud & Rika</h1>
-    <p>Wedding Invitation</p>
-    <button onclick="openInvite()">Buka Undangan</button>
+    <div class="cv-names">Daud <span class="amp">&amp;</span> Rika</div>
+    <p class="cv-sub">Wedding Invitation</p>
+    <p class="cv-dp">20 Juni 2026</p>
+    <button class="cv-btn" onclick="openInvite()">
+      <i class="fas fa-envelope-open-text"></i> Buka Undangan
+    </button>
+    <div class="cv-deco" style="margin-top:18px;margin-bottom:0">
+      <span></span><i class="fas fa-heart" style="color:#c46a8a"></i><span></span>
+    </div>
   </div>
 </section>
 
-<audio id="music" src="music.mp3" loop></audio>
-
-<!-- MAIN -->
+<!-- ===== MAIN ===== -->
 <div id="main">
 
-<section class="hero parallax">
-  <h2 class="hero-title" data-aos="fade-down">Daud & Rika</h2>
-  <span class="hero-date" data-aos="fade-up">01 Juni 2026</span>
-</section>
-
-<section class="about" data-aos="fade-up">
-  <h3>Assalamu’alaikum Warahmatullahi Wabarakatuh</h3>
-  <p>
-    Dengan memohon rahmat dan ridho Allah SWT, Tuhan Yang Maha Esa,  
-    kami bermaksud menyampaikan kabar bahagia serta mengundang
-    Bapak/Ibu/Saudara/i untuk berkenan hadir dan memberikan doa restu
-    pada acara pernikahan kami.
-
-    <br><br>
-    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-    Bapak/Ibu/Saudara/i dapat meluangkan waktu untuk hadir dalam
-    momen sakral penyatuan dua insan dalam ikatan suci pernikahan ini.
-
-    <br><br>
-    Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i,
-    kami ucapkan terima kasih yang sebesar-besarnya.
-  </p>
-</section>
-
-<section class="couple">
-
-  <div class="person animate-person-left" data-aos="fade-right">
-    <div class="photo-wrapper">
-      <img src="img/pria.jpg" alt="Foto Daud">
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="h-bg">
+      <img src="img/bg.jpg" alt="" class="h-img" id="heroImg" loading="eager">
+      <div class="h-ov"></div>
     </div>
-    <h4 class="name-shimmer">Daud</h4>
-    <p>Putra Bpk. Ahmad & Ibu Siti</p>
-  </div>
-
-  <div class="person animate-person-right" data-aos="fade-left">
-    <div class="photo-wrapper">
-      <img src="img/wanita.jpg" alt="Foto Rika">
+    <div class="h-c">
+      <p class="h-ey" data-aos="fade-down">The Wedding of</p>
+      <h2 class="h-t" data-aos="fade-up" data-aos-delay="100">Daud &amp; Rika</h2>
+      <div class="h-div" data-aos="zoom-in" data-aos-delay="220">
+        <span class="hl"></span><span class="hd">◆</span><span class="hl hlr"></span>
+      </div>
+      <span class="h-date" data-aos="fade-up" data-aos-delay="300">Sabtu, 20 Juni 2026</span>
+      <div class="h-sc" data-aos="fade-up" data-aos-delay="500">
+        <span>Scroll</span><div class="scl"></div>
+      </div>
     </div>
-    <h4 class="name-shimmer">Rika</h4>
-    <p>Putri Bpk. Budi & Ibu Lina</p>
-  </div>
+  </section>
 
-</section>
-
-<section class="countdown" data-aos="zoom-in">
-  <h3>Menuju Hari Bahagia</h3>
-  <div id="timer"></div>
-</section>
-
-<section class="gallery">
-  <h3 data-aos="fade-up">Galeri</h3>
-  <div class="grid">
-    <img src="img/galeri1.jpg" class="gallery-item" data-aos="zoom-in" onclick="openLightbox(this)">
-    <img src="img/galeri2.jpg" class="gallery-item" data-aos="zoom-in" onclick="openLightbox(this)">
-    <img src="img/galeri3.jpg" class="gallery-item" data-aos="zoom-in" onclick="openLightbox(this)">
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-<section class="gift" data-aos="fade-up">
-  <h3 class="gift-title">Amplop Digital</h3>
-
-  <div class="gift-card">
-    <div class="gift-icon">💝</div>
-
-    <p class="rek">BCA - <span id="rekNumber">1234567890</span></p>
-    <p class="an">a.n Daud</p>
-
-    <button class="copy-btn" onclick="copyRek()">Salin No Rekening</button>
-    <div class="copy-msg" id="copyMsg">Nomor rekening berhasil disalin ✔</div>
-  </div>
-</section>
-
-<section class="guestbook" data-aos="fade-up">
-  <h3>Buku Tamu</h3>
-  <form id="guestForm">
-    <input type="text" id="name" placeholder="Nama" required>
-    <textarea id="message" placeholder="Ucapan & Doa" required></textarea>
-    <button type="submit">Kirim</button>
-  </form>
-  <div id="guestList"></div>
-</section>
-
-<section class="location" data-aos="fade-up">
-  <h3 class="location-title">Lokasi Acara</h3>
-
-  <div class="map-wrapper">
-    <div class="map-pin">📍</div>
-
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.8271424472812!2d106.73029265902281!3d-6.458511145828351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8043797ff2d%3A0x556007a062f56522!2sCV.%20TIRTA%20USAHA%20(AQUA)!5e0!3m2!1sid!2sid!4v1771986318137!5m2!1sid!2sid"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
-
-  <a class="map-btn" 
-     href="https://maps.google.com/?q=-6.458511145828351,106.73029265902281" 
-     target="_blank">
-     Buka di Google Maps
-  </a>
-</section>
-
-<footer class="footer">
-  <div class="footer-content">
-
-    <p class="copyright">
-      © 2026 Daud & Rika
+  <!-- ABOUT -->
+  <section class="about sp" id="about" data-aos="fade-up">
+    <div class="slbl">01 / Sambutan</div>
+    <div class="abt-ar" data-aos="fade-up">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>
+    <h3 data-aos="fade-up" data-aos-delay="80">Assalamu'alaikum Warahmatullahi Wabarakatuh</h3>
+    <p data-aos="fade-up" data-aos-delay="130">
+      Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyampaikan kabar bahagia
+      serta mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir dan memberikan doa restu
+      pada acara pernikahan kami.
     </p>
-
-    <p class="powered">
-      Web Developer
-      <a href="https://instagram.com/benyoriki" target="_blank" 
-         class="ig-credit animated-credit">
-        <i class="fab fa-instagram"></i> @benyoriki
-      </a>
+    <p data-aos="fade-up" data-aos-delay="170">
+      Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+      dapat meluangkan waktu untuk hadir dalam momen sakral penyatuan dua insan
+      dalam ikatan suci pernikahan ini.
     </p>
-	<p class="powered">
-      
-      <a href="https://jasadaud.online/" target="_blank" 
-         class="ig-credit animated-credit">
-        <i class="fab fa-instagram"></i> M DAUD S.M
-      </a>
-	  Sales Executive Marketing
+    <p data-aos="fade-up" data-aos-delay="210">
+      Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i,
+      kami ucapkan terima kasih yang sebesar-besarnya.
     </p>
+    <div class="abt-ln"></div>
+  </section>
 
+  <!-- COUPLE -->
+  <section class="couple-sec sp" id="couple">
+    <div class="slbl">02 / Mempelai</div>
+    <h3 class="stit" data-aos="fade-up">Dua Insan Bersatu</h3>
+    <div class="cwrap">
+
+      <div class="person" data-aos="fade-right" data-aos-delay="80">
+        <div class="pframe">
+          <div class="pring a"></div>
+          <div class="pring b"></div>
+          <div class="pimg"><img src="img/pria.jpg" alt="Daud" loading="lazy"></div>
+        </div>
+        <h4 class="nshim">Muhammad Daud</h4>
+        <div class="pdiv"><span></span><i class="fas fa-heart"></i><span></span></div>
+        <p class="ppar">Putra dari</p>
+        <p class="ppn">Bpk. Ahmad &amp; Ibu Siti</p>
+      </div>
+
+      <div class="cc" data-aos="zoom-in" data-aos-delay="180">
+        <div class="rings">💍</div>
+        <p class="cclbl">Together</p>
+      </div>
+
+      <div class="person" data-aos="fade-left" data-aos-delay="80">
+        <div class="pframe">
+          <div class="pring a"></div>
+          <div class="pring b"></div>
+          <div class="pimg"><img src="img/wanita.jpg" alt="Rika" loading="lazy"></div>
+        </div>
+        <h4 class="nshim">Rika Amelia</h4>
+        <div class="pdiv"><span></span><i class="fas fa-heart"></i><span></span></div>
+        <p class="ppar">Putri dari</p>
+        <p class="ppn">Bpk. Budi &amp; Ibu Lina</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="cd-sec sp" id="countdown" data-aos="fade-up">
+    <div class="cd-glow"></div>
+    <div class="slbl">03 / Hitung Mundur</div>
+    <h3 class="stit">Menuju Hari Bahagia</h3>
+    <p class="cd-date">Sabtu, 20 Juni 2026</p>
+    <div class="trow">
+      <div class="tb"><span class="tn" id="td">00</span><span class="tl">Hari</span></div>
+      <div class="tsep">:</div>
+      <div class="tb"><span class="tn" id="th">00</span><span class="tl">Jam</span></div>
+      <div class="tsep">:</div>
+      <div class="tb"><span class="tn" id="tm">00</span><span class="tl">Menit</span></div>
+      <div class="tsep">:</div>
+      <div class="tb"><span class="tn" id="ts">00</span><span class="tl">Detik</span></div>
+    </div>
+  </section>
+
+  <!-- EVENT -->
+  <section class="ev-sec sp" id="event" data-aos="fade-up">
+    <div class="slbl">04 / Acara</div>
+    <h3 class="stit">Rangkaian Acara</h3>
+    <div class="evcards">
+      <div class="evc" data-aos="fade-up" data-aos-delay="80">
+        <div class="evico">🌸</div>
+        <h4>Akad Nikah</h4>
+        <p><i class="fas fa-clock"></i> 08.00 – 10.00 WIB</p>
+        <p><i class="fas fa-calendar-alt"></i> Sabtu, 20 Juni 2026</p>
+        <p><i class="fas fa-map-marker-alt"></i> Masjid Al-Ikhlas, Depok</p>
+      </div>
+      <div class="evc" data-aos="fade-up" data-aos-delay="180">
+        <div class="evico">🥂</div>
+        <h4>Resepsi</h4>
+        <p><i class="fas fa-clock"></i> 11.00 – 16.00 WIB</p>
+        <p><i class="fas fa-calendar-alt"></i> Sabtu, 20 Juni 2026</p>
+        <p><i class="fas fa-map-marker-alt"></i> CV. Tirta Usaha, Depok</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="loc sp" id="location" data-aos="fade-up">
+    <div class="slbl">05 / Lokasi</div>
+    <h3 class="stit">Lokasi Acara</h3>
+    <div class="map-out">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.8271424472812!2d106.73029265902281!3d-6.458511145828351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8043797ff2d%3A0x556007a062f56522!2sCV.%20TIRTA%20USAHA%20(AQUA)!5e0!3m2!1sid!2sid!4v1771986318137!5m2!1sid!2sid"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <a class="map-btn" href="https://maps.google.com/?q=-6.458511145828351,106.73029265902281" target="_blank" rel="noopener">
+      <i class="fas fa-location-arrow"></i> Buka di Google Maps
+    </a>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gal sp" id="gallery">
+    <div class="slbl">06 / Galeri</div>
+    <h3 class="stit" data-aos="fade-up">Momen Berharga</h3>
+    <div class="ggrid">
+      <div class="gi" data-aos="zoom-in" data-aos-delay="50" onclick="openLB('img/galeri1.jpg')">
+        <img src="img/galeri1.jpg" alt="Galeri 1" loading="lazy">
+        <div class="gio"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gi" data-aos="zoom-in" data-aos-delay="110" onclick="openLB('img/galeri2.jpg')">
+        <img src="img/galeri2.jpg" alt="Galeri 2" loading="lazy">
+        <div class="gio"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gi" data-aos="zoom-in" data-aos-delay="170" onclick="openLB('img/galeri3.jpg')">
+        <img src="img/galeri3.jpg" alt="Galeri 3" loading="lazy">
+        <div class="gio"><i class="fas fa-expand"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lb" onclick="closeLB()">
+    <div class="lb-in" onclick="event.stopPropagation()">
+      <button class="lbcl" onclick="closeLB()"><i class="fas fa-times"></i></button>
+      <img id="lbimg" src="" alt="">
+    </div>
   </div>
-</footer>
 
+  <!-- GIFT -->
+  <section class="gift sp" id="gift" data-aos="fade-up">
+    <div class="slbl">07 / Amplop Digital</div>
+    <h3 class="stit">Amplop Digital</h3>
+    <p class="gdesc">Doa restu Anda adalah hadiah terbesar bagi kami. Namun jika berkenan memberikan hadiah, berikut rekening kami.</p>
+    <div class="gcard">
+      <div class="glogo">🏦</div>
+      <p class="gbank">Bank BCA</p>
+      <p class="greek">No. Rek: <span id="rek">1234567890</span></p>
+      <p class="gan">a.n <strong>Daud</strong></p>
+      <button class="cpbtn" onclick="copyRek()"><i class="fas fa-copy"></i> Salin Nomor Rekening</button>
+      <div class="cpmsg" id="cpmsg"><i class="fas fa-check-circle"></i> Berhasil disalin!</div>
+    </div>
+  </section>
 
+  <!-- GUESTBOOK -->
+  <section class="gb-sec sp" id="guestbook" data-aos="fade-up">
+    <div class="slbl">08 / Buku Tamu</div>
+    <h3 class="stit">Ucapan &amp; Doa</h3>
+    <p class="gbdesc">Sampaikan ucapan dan doa terbaik Anda untuk kami.</p>
+    <div class="gbwrap">
+      <form onsubmit="submitGuest(event)">
+        <div class="fg">
+          <label><i class="fas fa-user"></i> Nama</label>
+          <input type="text" id="gname" placeholder="Nama lengkap Anda" required autocomplete="name">
+        </div>
+        <div class="fg">
+          <label><i class="fas fa-calendar-check"></i> Kehadiran</label>
+          <select id="gatt">
+            <option value="hadir">Insya Allah Hadir</option>
+            <option value="tidak">Tidak Bisa Hadir</option>
+            <option value="belum">Masih Belum Pasti</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label><i class="fas fa-comment-dots"></i> Ucapan &amp; Doa</label>
+          <textarea id="gmsg" placeholder="Tulis ucapan dan doa terbaik Anda..." required></textarea>
+        </div>
+        <button type="submit" class="sndbtn"><i class="fas fa-paper-plane"></i> Kirim Ucapan</button>
+      </form>
+    </div>
+    <div id="glist" class="glist"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="fnames">Daud &amp; Rika</div>
+    <div class="fdate">20 &middot; 06 &middot; 2026</div>
+    <div class="fq">
+      "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu
+      istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya."
+      <em>&mdash; QS. Ar-Rum: 21</em>
+    </div>
+    <div class="fcred">
+      <span>&copy; 2026 Daud &amp; Rika</span>
+      <span class="fsep">&middot;</span>
+      <a href="https://instagram.com/benyoriki" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @benyoriki</a>
+      <span class="fsep">&middot;</span>
+      <a href="https://jasadaud.online/" target="_blank" rel="noopener"><i class="fas fa-globe"></i> M DAUD S.M</a>
+    </div>
+  </footer>
+
+</div><!-- /#main -->
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="app.js"></script>
 </body>
-
 </html>
